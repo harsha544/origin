@@ -57,7 +57,7 @@ objects:
       spec:
         containers:
         - name: tiller
-          image: gcr.io/kubernetes-helm/tiller:${HELM_VERSION}
+          image: ibmcom/tiller-ppc64le:v2.9.1-icp
           env:
           - name: TILLER_NAMESPACE
             valueFrom:
