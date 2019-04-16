@@ -66,14 +66,17 @@ objects:
           ports:
           - name: tiller
             containerPort: 44134
+            nodePort: 44134
           readinessProbe:
             httpGet:
               path: /readiness
               port: 44135
+              nodePort: 44135
           livenessProbe:
             httpGet:
               path: /liveness
               port: 44135
+              nodePort: 44135
         serviceAccountName: tiller
 
 parameters:
